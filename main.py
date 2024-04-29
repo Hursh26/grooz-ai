@@ -1,4 +1,4 @@
-import hd
+import ai
 from flask import Flask, render_template, redirect, url_for, request, send_file
 import speech_recognition as sr
 from gtts import gTTS
@@ -31,7 +31,7 @@ def speech_to_text():
 
     print(text)
 
-    audio_text= hd.assistent(text)
+    audio_text= ai.assistent(text)
 
     # Create a temporary file to store the synthesized speech
     temp_file = tempfile.NamedTemporaryFile(delete=False)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat us</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js" integrity="sha512-11t8Q+vY9JlCrr+PveZKTYJq8n7O09Y5X/pk/aMd3vJugSvu4xOunGEUzaADqL3I8cZKE/pBwwCfXzDkRJh2sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var socket=io.connect("http://127.0.0.1:5000");
+    socket.on('connect', function(){
+        socket.send('Start');
+    });
+
+    socket.on('message', function(data){
+        $('#messages').append($('<p>').text(data));
+    });
+
+    $('#sendBTN').on('click', function(){
+        socket.send($('#username').val()+':'+$('#message').val());
+        $('#message').val('');
+    });
+})
+</script>
+
+</head>
+<body>
+<div class="messages">
+
+</div> 
+    <form method="POST" >
+        <input type="text" name="user" id="user">
+        <input type="text" name="message" id="message" required>
+        <input type="submit" name="sendBTN" id="sendBTN">
+    </form>
+
+</body>
+</html>

@@ -7,14 +7,27 @@ Grooz AI is revolutionizing the way businesses interact with their customers onl
 
 ## Deployment
 
-To deploy this project run
+To deploy this project, follow the steps below:
+
+1. Clone the repository:
 
 ```bash
-  npm run deploy
+git clone <repository_url>
+```
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
 ```
 
+3. Run the Flask app:
+
+```bash
+python main.py
+```
 
 ## API Reference
+The API endpoints for the Grooz AI platform are as follows:
 
 #### Get all items
 
@@ -43,11 +56,10 @@ Takes two numbers and returns the sum.
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to your `.env` file:
 
-whisper API `API_KEY`
-
-Grok API `ANOTHER_API_KEY`
+- `API_KEY`: API key for the Whisper API
+- `ANOTHER_API_KEY`: API key for the Grok API
 
 
 ## Features
@@ -60,36 +72,28 @@ Grok API `ANOTHER_API_KEY`
 
 ## Installation
 
-Install my-project with npm
+To install the necessary dependencies for this project, run the following command:
 
 ```bash
-  npm install my-project
-  cd my-project
+pip install -r requirements.txt
 ```
     
 ## Roadmap
 
-- Phase 1 (Done) - A fully functional and effecient Voice bot , responds the user as per quiery
-
-- Phase 2 - Perform tasks on the website as per quiery. End to End interaction.
-
-- Phase 3 - Seamless Website integration with auto data indexing
-
+- **Phase 1 (Done)**: A fully functional and efficient Voice bot, responds to the user as per query.
+- **Phase 2**: Perform tasks on the website as per query. End to End interaction.
+- **Phase 3**: Seamless Website integration with auto data indexing.
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
+**Server**: Flask
 
 ## FAQ
 
-#### Question 1
+### Question 1
 
 Answer 1
 
-#### Question 2
+### Question 2
 
 Answer 2
-

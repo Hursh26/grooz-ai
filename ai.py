@@ -1,11 +1,8 @@
-import os
-import random
 from groq import Groq
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
-import speech_recognition as sr
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import OllamaEmbeddings
